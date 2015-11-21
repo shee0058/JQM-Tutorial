@@ -2,24 +2,29 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>jQuery Mobile: Theme Download</title>
+	<title>How To Make Sushi At Home</title>
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="themes/Themes.css"/>
 	<link rel="stylesheet" href="themes/Themes.min.css" />
 	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="js/js.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-<!--Home Page-->
+<!-------------------Home Page------------------->
     
-	<div data-role="page" data-theme="a" data-url="home">
-		<div data-role="header" data-position="inline">
-			<h1>Guide To Something</h1>
+	<div id="home" data-role="page" data-theme="a" data-url="home">
+		<div class="ui-header" data-role="header" role="banner" data-theme="a">
+			<h1 data-theme="a" class="ui-title" role="heading" aria-level="1">Sushi Guide</h1>
 		</div>
 		<div data-role="content" data-theme="a">
-            <p>Blah blah blah blah blah this is a page about stuff</p>
+            <p>Hello there!</p>
+            <p>In this tutorial I am going to teach you how to make simple sushi at home.</p>
+            <img class="ui-corner-all" src="themes/images/homePic.jpg"/>
             <a href="#page1" id="startTut" class="ui-shadow ui-btn ui-corner-all" data-transition="flip" data-theme="a">Start Tutorial</a>
+            <a id="resumeTut" class="ui-shadow ui-btn ui-corner-all" data-transition="flip" data-theme="a">Resume Tutorial</a>
 		</div>
             <div data-role="navbar" class="ui-navbar" role="navigation">
                         <ul class="ui-grid-a">
@@ -30,15 +35,16 @@
                         </ul>
         </div>
 	</div>
-<!--Home Page End-->
+   
+<!-------------------About Me Page------------------->
     
-<!--About Me Page-->
     <div data-role="page" data-theme="a" data-url="info">
         <div data-role="header" data-position="inline">
             <h1>About Me</h1>
         </div>
     <div data-role="content" data-theme="a">
-        <p>Hi my name is Owen Sheehan</p>
+        <p>Hi my name is Owen Sheehan. I am an amateur mobile creator. I am currently enlisted for the program Mobile Application Design and Development at Alogonquin College.</p>
+        <img src="themes/images/aboutmePic.jpg" class="ui-corner-all"/>
     </div>
     <div data-role="footer" data-theme="a">
         <div data-role="navbar" class="ui-navbar" role="navigation">
@@ -51,12 +57,14 @@
         </div>
     </div>
     </div>
-<!--About Me Page End-->
-   <section data-role="page" data-theme="a" data-dialog="true" data-close-btn="none" data-url="page1" tabindex="0" class="ui-page ui-page-theme-a ui-dialog">
+    
+<!-------------------Dialog Page One------------------->
+    
+   <section id="page1" data-role="page" data-theme="a" data-dialog="true" data-close-btn="none" data-url="page1" tabindex="0" class="ui-page ui-page-theme-a ui-dialog">
        <div role="dialog" class="ui-corner-all">
         <!--home-->
         <div data-role="header" data-theme="a" role="banner" class="ui-header ui-bar-a">
-            <a href="#home" class="ui-btn-left ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all" data-role="button" role="button">No text</a>
+            <a href="#home" data-transition="flip" class="ui-btn-left ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all" data-role="button" role="button">No text</a>
             <!--header-->
             <h1 class="ui-title" role="heading" aria-level="1">Step 1 of 6</h1>
 
@@ -64,35 +72,150 @@
         </div>
         <article data-role="content" data-theme="a" class="ui-content ui-body-a" role="main">
             <!--content-->
-            <h1>hello</h1>
+            <h1>Step 1: Sticky Rice</h1>
 
-            <p>Welcome to the Start of the Tutorial!</p>
-            <p>In this Tutorial we will be learning something.</p>
-            <p>I don't know what it is yet.</p>
-
+            <p>The most important factor behind good sushi is the rice.</p>
+            <p>The way to make sticky rice is very easy.</p>
+            <p>Below are two easy steps to making it.</p>
+            
+            <div data-theme="a" data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+    <h4>Sticky Rice Steps</h4>
+    <ul data-role="listview" data-inset="false">
+        <p class="listItem">Rinse the rice in a strainer or colander until the water runs clear. Combine with water in a medium saucepan. Bring to a boil, then reduce the heat to low, cover and cook for 20 minutes. Rice should be tender and water should be absorbed. Cool until cool enough to handle.</p>
+        <p class="listItem">In a small saucepan, combine the rice, vinegar, oil, sugar and salt. Cook over medium heat until the sugar dissolves. Cool, then stir into the cooked rice. When you pour this in to the rice it will seem very wet. Keep stirring and the rice will dry as it cools.</p>
+    </ul>
+</div>
                 <a href="#page2" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-r ui-btn-icon-right nextP" data-theme="a" data-transition="slide">Next</a>
         </article>
        </div>
     </section>
-    <section data-role="page" data-theme="a" data-dialog="true" data-close-btn="none" data-url="page2" tabindex="0" class="ui-page ui-page-theme-a ui-dialog">
+    
+<!-------------------Dialog Page Two------------------->
+    
+    <section id="page2" data-role="page" data-theme="a" data-dialog="true" data-close-btn="none" data-url="page2" tabindex="0" class="ui-page ui-page-theme-a ui-dialog">
        <div role="dialog" class="ui-corner-all">
         <!--home-->
         <div data-role="header" data-theme="a" role="banner" class="ui-header ui-bar-a">
-            <a href="#home" class="ui-btn-left ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all" data-role="button" role="button" data-transition="slide">No text</a>
+            <a href="#home" class="ui-btn-left ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all" data-role="button" role="button" data-transition="flip">No text</a>
             <!--header-->
             <h1 class="ui-title" role="heading" aria-level="1">Step 2 of 6</h1>
 
 
         </div>
         <article data-role="content" data-theme="a" class="ui-content ui-body-a" role="main">
-            <h1>Hello</h1>
+            <h1>Step Two: Ingredients</h1>
 
-            <p>Welcome to the Start of the Tutorial!</p>
-            <p>In this Tutorial we will be learning something.</p>
-            <p>I don't know what it is yet.</p>
+            <p>In this tutorial we will be making are called California rolls.</p>
+            <p>The ingredients you will need for this are:</p>
+            <ul>
+                <li>Your sticky rice from step one</li>
+                <li>Sliced avocado</li>
+                <li>Nori</li>
+                <li>Crab meat</li>
+                <li>Sesame seeds</li>
+            </ul>
+            <img src="themes/images/page2Pic.jpg" class="ui-corner-all"/>
             <a href="#page1" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-l ui-btn-icon-left backP" data-theme="a" data-transition="pop">Next</a>
             <a href="#page3" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-r ui-btn-icon-right nextP" data-theme="a" data-transition="slide">Next</a>
            </article>
         </div>    
-</body>
+    </section>
+<!-------------------Dialog Page Three------------------->
+    
+    <section id="page3" data-role="page" data-theme="a" data-dialog="true" data-close-btn="none" data-url="page3" tabindex="0" class="ui-page ui-page-theme-a ui-dialog">
+       <div role="dialog" class="ui-corner-all">
+        <!--home-->
+        <div data-role="header" data-theme="a" role="banner" class="ui-header ui-bar-a">
+            <a href="#home" class="ui-btn-left ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all" data-role="button" role="button" data-transition="flip">No text</a>
+            <!--header-->
+            <h1 class="ui-title" role="heading" aria-level="1">Step 3 of 6</h1>
+
+        </div>
+        <article data-role="content" data-theme="a" class="ui-content ui-body-a" role="main">
+            <h1>Step Three: Setting up the roll</h1>
+            <p>Because a California Roll gets rolled inside out, you need to cover your makisu (bamboo mat) with plastic wrap to keep the rice from sticking to the mat. You'll also want to prepare a small bowl of water to dip your fingers in to keep the rice from sticking to them. If you don't have a makisu, a towel with plastic wrap on it will work just fine.</p>
+            <ol>
+                <li>Place a clump of rice on the nori</li>
+                <li>Spread the rice out with your fingers</li>
+                <li>Sprinkle the sesame seeds on this rice</li>
+            </ol>
+            <p>when you are done it should look something like this:</p>
+            <img src="themes/images/page3Pic.jpg" class="ui-corner-all" alt="rice on nori"/>
+            
+            <a href="#page2" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-l ui-btn-icon-left backP" data-theme="a" data-transition="pop">Next</a>
+            <a href="#page4" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-r ui-btn-icon-right nextP" data-theme="a" data-transition="slide">Next</a>
+           </article>
+        </div>
+    </section>
+<!-------------------Dialog Page Four------------------->
+    <section id="page4" data-role="page" data-theme="a" data-dialog="true" data-close-btn="none" data-url="page4" tabindex="0" class="ui-page ui-page-theme-a ui-dialog">
+       <div role="dialog" class="ui-corner-all">
+        <!--home-->
+        <div data-role="header" data-theme="a" role="banner" class="ui-header ui-bar-a">
+            <a href="#home" class="ui-btn-left ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all" data-role="button" role="button" data-transition="flip">No text</a>
+            <!--header-->
+            <h1 class="ui-title" role="heading" aria-level="1">Step 4 of 6</h1>
+
+        </div>
+        <article data-role="content" data-theme="a" class="ui-content ui-body-a" role="main">
+            <h1>Step Four: Adding Ingredients</h1>
+            <p>Flip the roll around and place your ingredients on it. I will be putting avacado and crab meat but you can put whatever you want in.</p>
+            
+            <p>Put the food stacked up at the bottom of the nori like this:</p>
+            <img src="themes/images/page4Pic.jpg" class="ui-corner-all" alt="rice on nori"/>
+            
+            <a href="#page3" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-l ui-btn-icon-left backP" data-theme="a" data-transition="pop">Next</a>
+            <a href="#page5" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-r ui-btn-icon-right nextP" data-theme="a" data-transition="slide">Next</a>
+           </article>
+        </div>
+    </section>
+<!-------------------Dialog Page Five------------------->
+    <section id="page5" data-role="page" data-theme="a" data-dialog="true" data-close-btn="none" data-url="page5" tabindex="0" class="ui-page ui-page-theme-a ui-dialog">
+       <div role="dialog" class="ui-corner-all">
+        <!--home-->
+        <div data-role="header" data-theme="a" role="banner" class="ui-header ui-bar-a">
+            <a href="#home" class="ui-btn-left ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all" data-role="button" role="button" data-transition="flip">No text</a>
+            <!--header-->
+            <h1 class="ui-title" role="heading" aria-level="1">Step 5 of 6</h1>
+
+        </div>
+        <article data-role="content" data-theme="a" class="ui-content ui-body-a" role="main">
+            <h1>Step Five: Finish rolling</h1>
+            <p>To roll, tuck your thumbs under the bamboo mat/towel and use them to lift the mat and rice over the filling, while using the rest of your fingers to hold the filling in place.</p>
+            <p>Use the mat to continue rolling the rice over the filling until the rice hits the nori.</p>
+            <p>Once, the rice has been completely rolled into a cylinder. Give the matt a firm hug with your fingers to compress the rice a little so it doesn't fall apart when you cut it.</p>
+            
+            
+            <img src="themes/images/page5Pic.jpg" class="ui-corner-all" alt="rice on nori"/>
+            
+            <a href="#page4" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-l ui-btn-icon-left backP" data-theme="a" data-transition="pop">Next</a>
+            <a href="#page6" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-r ui-btn-icon-right nextP" data-theme="a" data-transition="slide">Next</a>
+           </article>
+        </div>
+    </section>
+<!-------------------Dialog Page Six------------------->
+    
+<section id="page6" data-role="page" data-theme="a" data-dialog="true" data-close-btn="none" data-url="page6" tabindex="0" class="ui-page ui-page-theme-a ui-dialog">
+       <div role="dialog" class="ui-corner-all">
+        <!--home-->
+        <div data-role="header" data-theme="a" role="banner" class="ui-header ui-bar-a">
+            <a href="#home" class="ui-btn-left ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all" data-role="button" role="button" data-transition="flip">No text</a>
+            <!--header-->
+            <h1 class="ui-title" role="heading" aria-level="1">Step 6 of 6</h1>
+
+        </div>
+        <article data-role="content" data-theme="a" class="ui-content ui-body-a" role="main">
+            <h1>Step Six: You're Done</h1>
+            <p>That is how you make simple california rolls at home.</p>
+            <p>Enjoy!</p>
+            
+            
+            <img src="themes/images/page6Pic.jpg" class="ui-corner-all" alt="rice on nori"/>
+            <a href="#home" data-role="button" data-theme="a" class="ui-shadow ui-btn ui-corner-all" data-transition="flip">Home</a>
+            <a href="#info" data-role="button" data-theme="a" class="ui-shadow ui-btn ui-corner-all" data-transition="flip">About Me</a>
+            <a href="#page5" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-l ui-btn-icon-left backP" data-theme="a" data-transition="pop">Next</a>
+           </article>
+        </div>
+    </section>
+    </body>
 </html>
